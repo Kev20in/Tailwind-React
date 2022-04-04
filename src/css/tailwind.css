@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    
+    .btn{
+        @apply rounded-lg uppercase tracking-wider px-2 py-3 mx-4 lg:px-1 
+        inline-block font-semibold text-sm shadow-lg sm:text-base  transform transition  hover:border-transparent ring-2 ring-black active:bg-gray-200;   
+        }
+
+    .btn-primary{
+        @apply bg-indigo-500 rounded-lg uppercase tracking-wider px-5 py-3 mx-2 inline-block text-white font-semibold text-sm shadow-lg  ring-4 ring-indigo-500 sm:text-base hover:-translate-y-0.5 hover:bg-white hover:text-indigo-500 transform transition  hover:border-transparent active:bg-gray-200;   
+    }
+
+
+}
