@@ -1,9 +1,11 @@
 import React from "react";
-import popularDestinations from "./data/popularDestinations";
-import DestinationCard from "./components/DestinationCard";
+import Destination from "./components/Destination";
+import Header from "./components/Header";
+import Started from "./components/Started";
 export default function App() {
   return (
    <div>
+     <Header/>
     <div className="bg-gray-100 lg:grid grid-cols-2 2xl:grid-cols-5">
 
     <div className="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full 2xl:col-span-2">
@@ -15,14 +17,14 @@ export default function App() {
         src="/img/beach-work.jpg" 
         alt="work girl"/>
         
-        <h1 className="mt-4 font-bold text-2xl sm:mt-8 sm:text-4xl lg:text-2xl lg:inline-block xl:text-4xl">You can work from anywhere. 
+        <h1 className="mt-4 font-extrabold text-2xl sm:mt-8 sm:text-4xl lg:text-2xl lg:inline-block xl:text-4xl">You can work from anywhere. 
           <br className=""/> <span class="text-indigo-500"> Take advantage of it.</span></h1>
           <p className="mt-2  text-gray-600 sm:mt-4 sm:text-lg text-justify lg:text-lg">Workcation helps you find work-friendly rentals
             in beautiful locations so you can enjoy some
             nice weather even when you're not on vacation.</p>
             <div className="mt-4 space-x-4 sm:mt-6">
               <a className="btn-primary" href="###">Book your escape</a>
-              <a className="btn-primary" href="###">Read More</a>
+              <a className="btn-secundary" href="###">Learn More</a>
             </div> 
             </div>
           </div>
@@ -34,22 +36,12 @@ export default function App() {
           </div>
           <div className="bg-gray-100 col-span-2 xl:col-span-5 p-2"></div>
           <div className="bg-indigo-500 col-span-2 xl:col-span-5 p-4 lg:p-8"></div>
-        </div>
-        
-        <div className="max-w-md sm:max-w-xl lg:max-w-6xl mx-auto px-8 lg:px-12 pt-4 grid xl:grid-cols-5">
-            <h2 className="mb-2 text-xl font-bold text-gray-900 col-start-2 lx:col-start-3">Popular destination</h2>
-            <p cłassName=" text-gray-600 col-span-3 lx:col-start-3">A selection of great work-friendly cities with lots to see and explore.</p>
-        <div cłassName="mt-6 grid gap-6 lg:grid-cols-2 xl:grid-cols-3 lg:col-start-2 ">
-
-        {popularDestinations.map((Ubicacion)=> (
-            <DestinationCard destination={Ubicacion} key={Ubicacion.city}/>
-        ))}
-         </div>
-            <div className="p-5">
-
-            </div>
-  
-    </div>
+        </div>  
+         <Destination/>
+         <Started/> 
+         <footer className="bg-gray-300 hidden lg:block">
+           @CopyRight 2022 Hecho como practica por Kevin Agramonte Cruz
+         </footer>
     </div>
   );
 }
