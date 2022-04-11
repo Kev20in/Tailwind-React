@@ -2,6 +2,7 @@ import React from "react";
 import Destination from "./components/Destination";
 import Header from "./components/Header";
 import Started from "./components/Started";
+
 export default function App() {
   return (
    <div>
@@ -23,8 +24,8 @@ export default function App() {
             in beautiful locations so you can enjoy some
             nice weather even when you're not on vacation.</p>
             <div className="mt-4 space-x-4 sm:mt-6">
-              <a className="btn-primary" href="###">Book your escape</a>
-              <a className="btn-secundary" href="###">Learn More</a>
+              <a className="btn-primary" href="#">Book your escape</a>
+              <a className="btn-secundary" href="#">Learn More</a>
             </div> 
             </div>
           </div>
@@ -39,6 +40,7 @@ export default function App() {
         </div>  
          <Destination/>
          <Started/> 
+       
          <footer className="bg-gray-300 hidden lg:block">
            @CopyRight 2022 Hecho como practica por Kevin Agramonte Cruz
          </footer>
